@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import ukraine from "./FlagIcons/ukraine.png";
-import usa from "./FlagIcons/united-states.png";
-
 import { useTranslation, initReactI18next } from "react-i18next";
 import i18n from "i18next";
+import { Link } from "react-scroll";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -29,13 +26,43 @@ const Header = () => {
     i18n.changeLanguage(lng);
   };
   return (
-    <HeaderBlock>
-      <StyledLink to="/">{t("OleksaSarnatskyi")} </StyledLink>
+    <HeaderBlock name="header">
+      <StyledLink to="header" spy={true} smooth={true} duration={250}>
+        {t("OleksaSarnatskyi")}
+      </StyledLink>
       <LinkBlock>
-        <StyledLink to="/">{t("Home")}</StyledLink>
-        <StyledLink to="/">{t("Projects")} </StyledLink>
-        <StyledLink to="/">{t("Resume")} </StyledLink>
-        <StyledLink to="/">{t("Contacts")} </StyledLink>
+        <StyledLink
+          activeClass="active"
+          to="screen1"
+          spy={true}
+          smooth={true}
+          duration={250}>
+          {t("Home")}
+        </StyledLink>
+        <StyledLink
+          activeClass="active"
+          to="screen2"
+          spy={true}
+          smooth={true}
+          duration={250}>
+          {t("Projects")}
+        </StyledLink>
+        <StyledLink
+          activeClass="active"
+          to="screen3"
+          spy={true}
+          smooth={true}
+          duration={250}>
+          {t("Resume")}
+        </StyledLink>
+        <StyledLink
+          activeClass="active"
+          to="screen4"
+          spy={true}
+          smooth={true}
+          duration={250}>
+          {t("Contacts")}
+        </StyledLink>
         <Select onChange={(e) => changeLanguage(e.target.value)}>
           <Option value="en">🇺🇸{t(" en")}</Option>
           <Option value="uk">🇺🇦{t(" uk")}</Option>
@@ -66,7 +93,7 @@ const Option = styled.option`
 `;
 
 const HeaderBlock = styled.div`
-  height: 125px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-around;

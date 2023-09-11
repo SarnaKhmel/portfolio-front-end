@@ -19,6 +19,7 @@ export const LayoutBlock = styled.div`
 `;
 
 export const Block = styled.div`
+  padding-top: 125px;
   min-height: 100vh;
 `;
 
