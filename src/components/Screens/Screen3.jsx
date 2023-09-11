@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const Screen1 = () => {
+const Screen3 = () => {
   return (
-    <ScreenBlock name="screen1">
+    <ScreenBlock name="screen3">
+      3
       <InfoBlock>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
         incidunt itaque saepe eius ex velit debitis quas consectetur, rem
         quisquam libero facere suscipit ad perspiciatis unde aut quos eos
         dolorum!
       </InfoBlock>
-      <ImgBlock></ImgBlock>
     </ScreenBlock>
   );
 };
@@ -34,4 +34,4 @@ const ImgBlock = styled.div`
   justify-content: center;
 `;
 
-export default Screen1;
+export default Screen3;
