@@ -21,10 +21,6 @@ i18n.use(initReactI18next).init({
 
 const MainScreen = () => {
   const { t } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
   return (
     <>
       <Screen1 />
